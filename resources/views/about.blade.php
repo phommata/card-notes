@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('header')
-    <link>
 
 @section('content')
     <h1>The About Page Goes Here</h1>
