@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $people = ['Taylor', 'Matt', 'Jeffrey'];
+
+//    return view('welcome', ['people' => $people]); // array
+    return view('welcome', compact('people')); // compact func will create an array with a key and the value will be equal
+                                              // to whatever is associated with the variable
+//    return view('welcome')->with('people', $people);
+//    return view('welcome')->withPeople($people); // Dynamic methods - Laravel will properly parse
 });
 
 Route::get('about', function () {
