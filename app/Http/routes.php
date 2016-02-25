@@ -33,6 +33,7 @@
 
 
 Route::get('cards', 'CardsController@index');
+Route::get('cards/{card}', 'CardsController@show');
 //Route::get('cards/create', 'CardsController@create');
 //Route::post('cards/create', 'CardsController@store');
 //Route::post('cards/1', 'CardsController@show');
