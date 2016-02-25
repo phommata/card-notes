@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('about', function () {
-    return view('pages.about'); // resources/views/pages/about.blade.php
-});
+//Route::get('about', function () {
+//    return view('pages.about'); // resources/views/pages/about.blade.php
+//});
 
 //Route::get('/', function () {
 //    $people = ['Taylor', 'Matt', 'Jeffrey'];
@@ -28,8 +28,18 @@ Route::get('about', function () {
 ////    return view('welcome')->withPeople($people); // Dynamic methods - Laravel will properly parse
 //});
 
-Route::get('/', 'PagesController@home');
-Route::get('about', 'PagesController@about');
+//Route::get('/', 'PagesController@home');
+//Route::get('about', 'PagesController@about');
+
+
+Route::get('cards', 'CardsController@index');
+//Route::get('cards/create', 'CardsController@create');
+//Route::post('cards/create', 'CardsController@store');
+//Route::post('cards/1', 'CardsController@show');
+//Route::post('cards/1/edit', 'CardsController@edit');
+//Route::put('cards/1', 'CardsController@update');
+//Route::patch('cards/1', 'CardsController@update');
+//Route::delete('cards/1', 'CardsController@destroy');
 
 /*
 |--------------------------------------------------------------------------
