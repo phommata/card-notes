@@ -21,9 +21,15 @@ class NotesController extends Controller
 //
 //        $card->notes()->save($note);
 
-        $card->notes()->save(
-            new Note(['body' => $request->body])
-        );
+//        $card->notes()->save(
+//            new Note(['body' => $request->body])
+//        );
+
+//        $card->notes()->create([
+//            'body' => $request->body
+//        ]);
+
+        $card->notes()->create($request->all()); // []
 
 //        return \Redirect::to('/some/new/uri');
 //        return redirect()->to('/some/new/uri');
