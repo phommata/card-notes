@@ -9,8 +9,9 @@ use App\Http\Controllers\Controller;
 
 class NotesController extends Controller
 {
-    public function store(Request $request)
+    public function store()
     {
-        return $request->all();
+//        return \Request::all();
+        return request()->all();
     }
 }
