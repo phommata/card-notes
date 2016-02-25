@@ -15,10 +15,14 @@ class NotesController extends Controller
     {
 //        return $card;
 
-        $note = new Note;
+//        $note = new Note;
+//
+//        $note->body = $request->body;
+//
+//        $card->notes()->save($note);
 
-        $note->body = $request->body;
-
+        $note = new Note(['body' => $request->body]);
+        
         $card->notes()->save($note);
 
 //        return \Redirect::to('/some/new/uri');
