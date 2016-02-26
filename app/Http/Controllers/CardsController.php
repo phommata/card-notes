@@ -26,7 +26,7 @@ class CardsController extends Controller
 //        $card = Card::with('notes.user')->find(1); // redundant to call the Card class, already have the Card object
         $card->load('notes.user'); // Eager load
 
-        return $card;
+//        return $card;
 
         return view('cards.show', compact('card'));
     }
