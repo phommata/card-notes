@@ -13,9 +13,17 @@ class NotesController extends Controller
 {
     public function store(Request $request, Card $card)
     {
-        $card->addNote(
-            new Note($request->all())
-        );
+        $this->validate($request, [
+            'body' => 'required|min:10',
+//            'email' => 'email|required|unique:users,email',
+        ]);
+
+        $note = new Note($request->all());
+//        $note->user_id = 1;
+//        $note->by(Auth::user());
+
+//        $card->addNote($note, 1);
+        $card->addNote($note, 1);
 
 //        return \Redirect::to('/some/new/uri');
 //        return redirect()->to('/some/new/uri');
